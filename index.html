@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Umair Group</title>
+</head>
+<body>
+	<h1>Welcome to Umair Group</h1>
+	<p>We are a leading company in the field of real estate and construction. Our team of experts work diligently to provide top-quality services to our clients.</p>
+	<h2>Contact Us</h2>
+	<form action="https://docs.google.com/forms/d/e/1FAIpQLSf48Ms0aW9oEwWYgTsvzgSief5GFEDt56LMQM9dDuSPqHu3rg/formResponse" method="POST" target="hidden_iframe">
+		<label for="name">Name:</label><br>
+		<input type="text" id="name" name="entry.394789812"><br>
+		<label for="email">Email:</label><br>
+		<input type="email" id="email" name="entry.311566164"><br>
+		<label for="message">Message:</label><br>
+		<textarea id="message" name="entry.1724661825"></textarea><br>
+		<input type="submit" value="Submit">
+	</form>
+	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+	<script>
+		var submitted = false;
+	</script>
+	<h2>Featured Projects</h2>
+	<div id="slider">
+		<img src="project1.jpg" alt="Project 1">
+		<img src="project2.jpg" alt="Project 2">
+		<img src="project3.jpg" alt="Project 3">
+	</div>
+	<script>
+		var images = document.getElementById("slider").getElementsByTagName("img");
+		var current = 0;
+		setInterval(function() {
+			for (var i = 0; i < images.length; i++) {
+				images[i].style.display = "none";
+			}
+			current = (current + 1) % images.length;
+			images[current].style.display = "block";
+		}, 2000);
+	</script>
+</body>
+</html>
